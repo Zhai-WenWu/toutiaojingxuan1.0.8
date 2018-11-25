@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.deshang.ttjx.framework.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height" />
+
+    <TextView
+        android:id="@+id/my_apprentice_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="15dp"
+        android:text=""
+        android:textColor="@color/tv_black"
+        android:textSize="@dimen/sp_biger" />
+
+    <TextView
+        android:id="@+id/money_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@color/tv_black"
+        android:textSize="@dimen/sp_biger" />
+
+    <TextView
+        android:id="@+id/my_apprentice_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:maxLines="2"
+        android:paddingBottom="18dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@color/tv_black"
+        android:textSize="@dimen/sp_biger" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_deep" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_apprentice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="我的徒弟"
+                android:textColor="@color/tab_bg"
+                android:textSize="@dimen/sp_biger" />
+
+            <View
+                android:id="@+id/app_view"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_alignBottom="@id/my_apprentice"
+                android:layout_centerHorizontal="true"
+                android:background="@color/tab_bg" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_disciple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="我的徒孙"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/sp_biger" />
+
+            <View
+                android:id="@+id/dis_view"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_alignBottom="@id/my_disciple"
+                android:layout_centerHorizontal="true"
+                android:background="@color/tab_bg"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_deep" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="setting">
+        <attr name="tv_left" format="reference|string"/>
+        <attr name="iv_left" format="reference"/>
+        <attr name="tv_right" format="reference|string"/>
+        <attr name="iv_right" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="RatingBar" tools:ignore="ResourceName">
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starImageWidth" format="dimension" />
+        <attr name="starImageHeight" format="dimension" />
+        <attr name="starImagePadding" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starNum" format="integer" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
+        <attr name="starHalf" format="reference" />
+        <attr name="clickable" format="boolean" />
+        <attr name="halfstart" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SlantedTextView">
+        <attr name="slantedTextSize" format="dimension" />
+        <attr name="slantedBackgroundColor" format="color" />
+        <attr name="slantedText" format="string" />
+        <attr name="slantedTextColor" format="color" />
+        <attr name="slantedLength" format="dimension" />
+        <attr name="slantedMode" format="enum">
+            <enum name="left" value="0"></enum>
+            <enum name="right" value="1"></enum>
+            <enum name="left_bottom" value="2"></enum>
+            <enum name="right_bottom" value="3"></enum>
+            <enum name="left_triangle" value="4"></enum>
+            <enum name="right_triangle" value="5"></enum>
+            <enum name="left_bottom_triangle" value="6"></enum>
+            <enum name="right_bottom_triangle" value="7"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="WaveProgressView">
+        <attr name="progress_max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="speed" format="float" />
+        <attr name="wave_width" format="float" />
+        <attr name="wave_height" format="float" />
+        <attr name="wave_color" format="color" />
+        <attr name="wave_bg_color" format="color" />
+        <attr name="stroke_color" format="color" />
+        <attr name="main_text" format="string" />
+        <attr name="main_text_color" format="color" />
+        <attr name="main_text_size" format="dimension" />
+        <attr name="hint_text" format="string" />
+        <attr name="hint_color" format="color" />
+        <attr name="hint_size" format="dimension" />
+        <attr name="text_space" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TextBannerViewStyle">
+        <attr name="setInterval" format="integer|reference"/>
+        <attr name="setAnimDuration" format="integer|reference"/>
+        <attr name="setTextSize" format="dimension|reference"/>
+        <attr name="setTextColor" format="color|reference"/>
+        <attr name="setSingleLine" format="boolean"/>
+
+        <attr name="setFlags">
+            <enum name="strike" value="0"/>
+            <enum name="underline" value="1"/>
+        </attr>
+        <attr name="setGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="setDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+        <attr name="setTypeface">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+            <enum name="italic_bold" value="3"/>
+        </attr>
+        <attr name="typeface">
+            <enum name="normal" value="0"/>
+            <enum name="arial" value="1"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.deshang.ttjx.framework.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+    </com.deshang.ttjx.framework.widget.TitleBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:paddingBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥0"
+                android:textColor="@color/red_light"
+                android:textSize="36dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/money"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/money"
+                android:text="元零钱"
+                android:textColor="@color/tv_black"
+                android:textSize="@dimen/sp_common" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/wallet_share"
+                android:gravity="center"
+                android:text="晒收入赚金币"
+                android:textColor="#FFB210"
+                android:textSize="@dimen/sp_small" />
+
+            <TextView
+                android:id="@+id/gold_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@mipmap/wallet_gold"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="金币：0"
+                android:textColor="@color/tv_black"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/how_make_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/gold_num"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-3dp"
+                android:padding="5dp"
+                android:text="赚更多"
+                android:textColor="@color/pink_tab2"
+                android:textSize="@dimen/sp_common"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:lineSpacingExtra="3dp"
+            android:padding="12dp"
+            android:text=""
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/sp_common" />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/mIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layerType="software" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@mipmap/wallet_withdrawal"
+                android:gravity="center"
+                android:text="提 现"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_big" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:layout_marginLeft="4dp"
+        android:background="@color/gray_lighter"
+        android:clickable="false"
+        android:focusable="false"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/image"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_gray_ad_radius"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="广告"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/video_list_bg" />
+
+    <TextView
+        android:id="@+id/maeked_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-12dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_black_transparent_radius"
+        android:drawableRight="@mipmap/video_diamond"
+        android:drawablePadding="@dimen/dp_5"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="作品已赚"
+        android:textColor="@color/white"
+        android:textSize="11dp" />
+
+
+    <TextView
+        android:id="@+id/fabulous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:drawableLeft="@mipmap/fabulous"
+        android:drawablePadding="5dp"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="15万"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

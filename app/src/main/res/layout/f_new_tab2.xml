@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/tvStyle_black_big"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_height"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/market"
+            android:textColor="@color/tv_black"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:text="规则介绍"
+            android:textColor="#323232"
+            android:textSize="@dimen/sp_small" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_title_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scroll_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/gray_deep"
+                android:textSize="@dimen/sp_smaller" />
+
+            <com.deshang.ttjx.ui.mywidget.scroll_text.TextBannerView
+                android:id="@+id/tv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                app:setAnimDuration="1000"
+                app:setDirection="bottom_to_top"
+                app:setGravity="center"
+                app:setInterval="3000"
+                app:setSingleLine="true"
+                app:setTextColor="@color/gray_deep"
+                app:setTextSize="@dimen/sp_smaller"
+                app:setTypeface="bold"
+                app:typeface="arial" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/earth_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/wallet_bg_blue" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_diamond_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/earth_bg"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="22dp">
+
+                    <ImageView
+                        android:id="@+id/image_diamond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/task_diamond" />
+
+                    <com.robinhood.ticker.TickerView
+                        android:id="@+id/diamond_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/image_diamond"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_bigger" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_load"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/diamond_num"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/add_diamond_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+0.00"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_small"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/loading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@id/add_diamond_num"
+                            android:src="@mipmap/receive_diamond_loading"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/commit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/rl_diamond_num"
+                    android:layout_below="@id/rl_diamond_num"
+                    android:layout_marginBottom="2dp"
+                    android:text="正在上链中"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_smaller"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/image_earth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/earth_bg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/wallet_earth_blue" />
+
+                <com.deshang.ttjx.ui.mywidget.BubbleContainer
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/earth_bg"
+                    android:layout_alignLeft="@id/earth_bg"
+                    android:layout_alignRight="@id/earth_bg"
+                    android:layout_alignTop="@id/earth_bg" />
+
+                <ImageView
+                    android:id="@+id/one_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/earth_bg"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/one_key_receive_bubble"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@mipmap/make_money_today_bg">
+
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/task_detail" />
+
+                    <ImageView
+                        android:id="@+id/right_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/task_right" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/right_detail"
+                        android:layout_toRightOf="@id/image1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="挖矿明细"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/sp_small" />
+
+                        <TextView
+                            android:id="@+id/detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="今日:0.0000TB"
+                            android:textColor="@color/tv_gray"
+                            android:textSize="@dimen/sp_smaller" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_withdrawal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/make_money_today_bg">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/task_withdrawal" />
+
+                    <ImageView
+                        android:id="@+id/right_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/task_right" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/right_sale"
+                        android:layout_toRightOf="@id/image2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="卖出提现"
+                            android:textColor="@color/tv_black"
+                            android:textSize="@dimen/sp_small" />
+
+                        <TextView
+                            android:id="@+id/sale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="今日:0.00元"
+                            android:textColor="@color/tv_gray"
+                            android:textSize="@dimen/sp_smaller" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@mipmap/task_image2"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/task_image2"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="做任务得红钻"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_bigger"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/user_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/task_image1"
+                    android:drawablePadding="10dp"
+                    android:text="新手任务"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_big"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_title_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:text="每完成一个新手任务奖励1红钻"
+                    android:textColor="@color/gray_deep"
+                    android:textSize="@dimen/sp_smaller"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/user_view"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFF7F7F7" />
+
+            <com.deshang.ttjx.framework.widget.NoSlidingListView
+                android:id="@+id/user_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/day_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/task_image1"
+                    android:drawablePadding="10dp"
+                    android:text="日常任务"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_big"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_title_mark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:text="每完成一个日常任务奖励1红钻"
+                    android:textColor="@color/gray_deep"
+                    android:textSize="@dimen/sp_smaller"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#FFF7F7F7" />
+
+            <com.deshang.ttjx.framework.widget.NoSlidingListView
+                android:id="@+id/day_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:minWidth="10000dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="5dp"
+            android:src="@mipmap/sign_close" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/red_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/red_packet_online_top" />
+
+            <ImageView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34dp"
+                android:src="@mipmap/red_packet_online_tv1" />
+
+            <ImageView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/red_top"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="34dp"
+                android:src="@mipmap/red_packet_online_tv2" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv2"
+                android:layout_below="@id/tv1"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tv_gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="#FFF568"
+                    android:textSize="34dp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_gold"
+                    android:text="金币"
+                    android:textColor="#FFF568"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/red_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/red_top"
+                android:layout_marginTop="-2dp"
+                android:src="@mipmap/red_packet_online_bottom" />
+
+            <ImageView
+                android:id="@+id/red_packet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/red_bottom"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:src="@mipmap/red_packet_online_btn" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

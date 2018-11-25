@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+    <com.deshang.ttjx.framework.widget.TitleBar
+        android:id="@+id/book_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+    </com.deshang.ttjx.framework.widget.TitleBar>
+
+    <WebView
+        android:id="@+id/web_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </WebView>
+
+
+</LinearLayout>

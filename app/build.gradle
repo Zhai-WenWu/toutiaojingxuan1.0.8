@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.3'
+    defaultConfig {
+
+        applicationId "com.deshang.ttjx"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        doNotStrip "*/armeabi/libdu.so"
+        doNotStrip "*/x86/libdu.so"
+    }
+    /*packagingOptions{
+        doNotStrip "*//*armeabi/libdeepknow-lib.so"
+        doNotStrip "*//*armeabi-v7a/libdeepknow-lib.so"
+        doNotStrip "*//*x86/libdeepknow-lib.so"
+        doNotStrip "*//*arm64-v8a/libdeepknow-lib.so"
+        doNotStrip "*//*x86_64/libdeepknow-lib.so"
+    }*/
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7Version
+    //
+    compile project(':mvp-rx')
+    //本项目引用包
+
+    //    compile 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    compile files('libs/jcore-android-1.2.5.jar')
+    compile files('libs/jpush-android-3.1.6.jar')
+    compile files('libs/MobCommons-2018.0523.1925.jar')
+    compile files('libs/MobTools-2018.0523.1923.jar')
+    compile files('libs/ShareSDK-Core-3.2.0.jar')
+    compile files('libs/ShareSDK-Wechat-3.2.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-3.2.0.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-3.2.0.jar')
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile files('libs/Baidu_Mtj_3.9.0.6.jar')
+    compile project(':libzxing-master')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/open_sdk_r5781.jar')
+    compile files('libs/du.jar')
+    compile files('libs/Baidu_MobAds_SDK.jar')
+    compile files('libs/ShareSDK-QQ-3.2.1.jar')
+    compile files('libs/ShareSDK-QZone-3.2.1.jar')
+    compile(name: 'open_ad_sdk', ext: 'aar')
+    compile project(':MPChartLib')
+    //
+    // 数字滚动增加
+    compile(name: 'geetest_deepknow_android_v0.3.8_20180829_sec', ext: 'aar')
+    compile(name: 'geetest_sensebot_android_v0.1.3_20180827', ext: 'aar')
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.flyco.banner:FlycoBanner_Lib:2.0.2@aar'
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.6'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.robinhood.ticker:ticker:1.0.1'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile files('libs/pldroid-player-2.1.5.jar')
+//    compile 'cn.fanrunqi:waveprogress:1.0.0'
+}

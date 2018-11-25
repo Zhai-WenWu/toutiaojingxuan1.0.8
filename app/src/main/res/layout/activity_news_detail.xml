@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_toast"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/bg_color"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="123213213"
+            android:textColor="@color/tv_red"
+            android:textSize="@dimen/sp_big"
+            android:visibility="gone" />
+
+        <com.deshang.ttjx.framework.widget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/white">
+
+        </com.deshang.ttjx.framework.widget.TitleBar>
+
+        <RelativeLayout
+            android:id="@+id/rl_tb"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/image_smoke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/buff_magic_1" />
+
+            <ImageView
+                android:id="@+id/image_rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/wallet_tb" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/rl_top"
+        android:background="@color/gray_title_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:src="@mipmap/image_share_news" />
+
+        <ImageView
+            android:id="@+id/share_reward1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@id/share"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/share_reward_news_detail"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/rl_bottom"
+        android:background="@color/white_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view1"
+        android:layout_below="@id/view_top"
+        android:background="@color/white_milky">
+
+        <com.deshang.ttjx.ui.mywidget.WebViewScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.deshang.ttjx.ui.mywidget.ScrollWebView
+                    android:id="@+id/web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/ll_vote_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/web_view"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_vote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="25dp"
+                            android:paddingTop="25dp">
+
+                            <ImageView
+                                android:id="@+id/image_z_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/news_detail_like_bg" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/image_z_bg"
+                                android:layout_alignTop="@id/image_z_bg"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/news_detail_diamond" />
+
+                                <TextView
+                                    android:id="@+id/tv_bonus_money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="0"
+                                    android:textColor="@color/gray_detail"
+                                    android:textSize="@dimen/sp_smaller" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/image_z_bg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center_vertical"
+                                android:text="作品已赚"
+                                android:textColor="@color/gray_detail"
+                                android:textSize="@dimen/sp_smaller" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_zan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="25dp"
+                            android:paddingTop="25dp">
+
+                            <ImageView
+                                android:id="@+id/image_like_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@mipmap/news_detail_like_bg" />
+
+                            <LinearLayout
+                                android:id="@+id/rl_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/image_like_bg"
+                                android:layout_alignTop="@id/image_like_bg"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/like"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@mipmap/like" />
+
+                                <TextView
+                                    android:id="@+id/tv_like"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@id/like"
+                                    android:text="0"
+                                    android:textColor="@color/gray_detail"
+                                    android:textSize="@dimen/sp_smaller" />
+                            </LinearLayout>
+
+                            <com.deshang.ttjx.ui.mywidget.WaveProgressView
+                                android:id="@+id/vote_progress"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_toLeftOf="@id/rl_like"
+                                app:main_text="0"
+                                app:main_text_color="@color/white"
+                                app:main_text_size="12dp"
+                                app:progress="0"
+                                app:progress_max="5"
+                                app:speed="0.25"
+                                app:wave_bg_color="@color/gray_light1"
+                                app:wave_color="@color/red_detail"
+                                app:wave_height="3"
+                                app:wave_width="20" />
+
+                            <TextView
+                                android:id="@+id/can_see"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/image_like_bg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="3dp"
+                                android:drawablePadding="3dp"
+                                android:drawableRight="@mipmap/like_hint"
+                                android:gravity="center_vertical"
+                                android:text="值得看"
+                                android:textColor="@color/gray_detail"
+                                android:textSize="@dimen/sp_smaller" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/can_see_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/ll_vote_out"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-25dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/image_rules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/detail_can_see_rules" />
+
+                    <ImageView
+                        android:id="@+id/rules_know"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/image_rules"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="12dp"
+                        android:src="@mipmap/red_packet_rules2" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/image_rules1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/ll_vote_out"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-25dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/detail_can_see_rules_other"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/frame_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_vote_out">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_bd_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <FrameLayout
+                        android:id="@+id/frame_gdt_ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_tj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/frame_ad"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="15dp"
+                        android:text="热门推荐"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_recommend"
+                        android:background="@color/gray_light" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignRight="@id/tv_recommend"
+                        android:layout_below="@id/tv_recommend"
+                        android:background="@color/tv_red" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_tj" />
+
+                <TextView
+                    android:id="@+id/load_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="点击加载更多..."
+                    android:textColor="@color/tv_black"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </com.deshang.ttjx.ui.mywidget.WebViewScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="12dp">
+
+            <ImageView
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_readtimer_redpacket_bg" />
+
+            <com.deshang.ttjx.ui.mywidget.RoundView
+                android:id="@+id/round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/view"
+                android:layout_alignLeft="@id/view"
+                android:layout_alignRight="@id/view"
+                android:layout_alignTop="@id/view"
+                android:layout_centerInParent="true"
+                android:layout_margin="4dp"
+                app:ring_color="@color/red_detail"
+                app:ring_width="4dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/round"
+                android:layout_alignLeft="@id/round"
+                android:layout_alignRight="@id/round"
+                android:layout_alignTop="@id/round"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/bg_red_packet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_readtimer_redpacket" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="+100"
+                    android:textColor="@color/tv_red"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rl_red"
+            android:layout_toRightOf="@id/rl_red"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/red_packet_rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/red_packet_rules1" />
+
+            <ImageView
+                android:id="@+id/i_know"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/red_packet_rules"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/red_packet_rules2" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/my_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/horizontal_progressbar"
+            android:secondaryProgress="0" />
+
+        <ImageView
+            android:id="@+id/share_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/share_reward"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/share_reward"
+            android:layout_alignRight="@id/share_reward"
+            android:layout_marginRight="-8dp"
+            android:padding="3dp"
+            android:src="@mipmap/close"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

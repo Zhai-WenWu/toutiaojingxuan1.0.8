@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@mipmap/rotate_01"
+        android:duration="90" />
+    <item
+        android:drawable="@mipmap/rotate_02"
+        android:duration="90" />
+    <item
+        android:drawable="@mipmap/rotate_03"
+        android:duration="90" />
+    <item
+        android:drawable="@mipmap/rotate_04"
+        android:duration="90" />
+    <item
+        android:drawable="@mipmap/rotate_05"
+        android:duration="90" />
+    <item
+        android:drawable="@mipmap/rotate_06"
+        android:duration="90" />
+
+</animation-list>

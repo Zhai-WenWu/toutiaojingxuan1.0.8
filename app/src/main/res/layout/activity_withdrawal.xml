@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.deshang.ttjx.framework.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white">
+
+    </com.deshang.ttjx.framework.widget.TitleBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:paddingLeft="12dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前余额"
+                    android:textColor="@color/gray_deep"
+                    android:textSize="@dimen/sp_small" />
+
+                <TextView
+                    android:id="@+id/tv_dollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv"
+                    android:layout_marginBottom="5dp"
+                    android:text="0"
+                    android:textColor="@color/tv_black"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_dollar"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_dollar"
+                    android:text="零钱"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/sp_big" />
+
+                <TextView
+                    android:id="@+id/withdrawal_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/bg_withdrawal"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="提现列表"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_small" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现方式"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/sp_common" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_we_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@mipmap/withdrawal_type_selector"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/withdrawal_wechat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="微信"
+                        android:textColor="@color/tv_black"
+                        android:textSize="@dimen/sp_big" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="提现金额"
+                    android:textColor="@color/tv_black"
+                    android:textSize="@dimen/sp_common" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_withdrawal_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tv_dollar_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1元提现兑换说明"
+                    android:textColor="@color/pink_color"
+                    android:textSize="@dimen/sp_common" />
+
+                <TextView
+                    android:id="@+id/tv_dollar_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="连续登陆5天的用户即可获得一次1元提现机会，但不可累积"
+                    android:textColor="@color/pink_color"
+                    android:textSize="@dimen/sp_small" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="15dp"
+                android:text="注意事项"
+                android:textColor="@color/gray_deep"
+                android:textSize="@dimen/sp_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="1.提现申请将在1-3工作日内审批到账，请耐心等待"
+                android:textColor="@color/gray_deep"
+                android:textSize="@dimen/sp_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="2.请及时关注“我的>提现>提现列表”查看提现状态"
+                android:textColor="@color/gray_deep"
+                android:textSize="@dimen/sp_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="3.如发现未到账情况请及时联系客服"
+                android:textColor="@color/gray_deep"
+                android:textSize="@dimen/sp_small" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light" />
+
+    <TextView
+        android:id="@+id/withdrawal_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:background="@mipmap/withdrawal_now"
+        android:gravity="center"
+        android:text="立即提现"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_big" />
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="tvStyle_gray">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_gray_big">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_big</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_gray_small">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_gray_smaller">
+        <item name="android:textColor">@color/tv_gray</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_graylight_small">
+        <item name="android:textColor">@color/tv_gray_light</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_graylight_smaller">
+        <item name="android:textColor">@color/tv_gray_light</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white_big">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_bigger</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white_small">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_white_smaller">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_black">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tvStyle_black_big">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:textSize">@dimen/sp_bigger</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_black_small">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_black_smaller">
+        <item name="android:textColor">@color/tv_black</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blacklight">
+        <item name="android:textColor">@color/tv_black_light</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blacklight_small">
+        <item name="android:textColor">@color/tv_black_light</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blacklight_smaller">
+        <item name="android:textColor">@color/tv_black_light</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blue">
+        <item name="android:textColor">@color/tv_blue</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blue_small">
+        <item name="android:textColor">@color/tv_blue</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_blue_smaller">
+        <item name="android:textColor">@color/tv_blue</item>
+        <item name="android:textSize">@dimen/sp_smaller</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_deepblue">
+        <item name="android:textColor">@color/deepblue</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_deepblue_small">
+        <item name="android:textColor">@color/deepblue</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_orenge">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">@dimen/sp_common</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tvStyle_orenge_small">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tvStyle_bg_blue">
+        <item name="android:textColor">@color/bg_color</item>
+        <item name="android:textSize">@dimen/sp_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

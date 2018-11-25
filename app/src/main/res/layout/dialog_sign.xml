@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:minWidth="10000dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/sign_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/sign_bg" />
+
+        <ImageView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_35"
+            android:src="@mipmap/sign_tv1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/sign_day_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="#FFEA00"
+                    android:textSize="26dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="2dp"
+                    android:text="天"
+                    android:textColor="#FFEA00"
+                    android:textSize="@dimen/sp_smaller" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_day"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/sign_tv2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/sign_bg"
+            android:layout_alignLeft="@id/sign_bg"
+            android:layout_alignRight="@id/sign_bg"
+            android:layout_below="@id/tv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_orange_radius"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller" />
+
+                    <TextView
+                        android:id="@+id/tv_one1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第一天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_two1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第二天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_three1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第三天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_four1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第四天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="400"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_five1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第五天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_six1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第六天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/bg_seven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/sign_gold_bg"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/img_seven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/sign_gold_gray" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_seven"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_seven1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="第七天"
+                        android:textColor="@color/gray_deep"
+                        android:textSize="@dimen/sp_smaller"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:src="@mipmap/sign_close" />
+</LinearLayout>

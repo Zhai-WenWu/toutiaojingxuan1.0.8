@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@mipmap/buff_magic_1"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_2"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_3"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_4"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_5"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_6"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_7"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_8"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_9"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_10"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_11"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_12"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_13"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_14"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_15"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_16"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_17"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_18"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_19"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_20"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_21"
+        android:duration="50" />
+    <item
+        android:drawable="@mipmap/buff_magic_22"
+        android:duration="50" />
+
+</animation-list>

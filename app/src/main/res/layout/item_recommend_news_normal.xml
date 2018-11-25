@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_select_bg"
+        android:paddingBottom="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/dp_108"
+            android:layout_height="@dimen/dp_74"
+            android:layout_alignParentRight="true"
+            android:background="@color/gray_lighter"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/read_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/image"
+            android:drawableLeft="@mipmap/read_number"
+            android:drawablePadding="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="46538"
+            android:textColor="@color/gray_deep"
+            android:textSize="@dimen/sp_small" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/from"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/image"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            android:text="title"
+            android:textColor="@color/tv_black"
+            android:textSize="@dimen/sp_bigger" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/white_light" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ListView
+        android:id="@+id/rolePop_listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dividerHeight="0.1dp"
+        android:divider="@color/gray_light"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+    </ListView>
+
+</RelativeLayout>
